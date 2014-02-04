@@ -85,13 +85,13 @@ namespace GuessTheSecretNumber {
         protected global::System.Web.UI.WebControls.PlaceHolder PlaceHolder1;
         
         /// <summary>
-        /// Label1 control.
+        /// PrevGuesses control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label1;
+        protected global::System.Web.UI.WebControls.Label PrevGuesses;
         
         /// <summary>
         /// PlaceHolder2 control.
@@ -103,12 +103,30 @@ namespace GuessTheSecretNumber {
         protected global::System.Web.UI.WebControls.PlaceHolder PlaceHolder2;
         
         /// <summary>
-        /// Label2 control.
+        /// CurrentGuess control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label2;
+        protected global::System.Web.UI.WebControls.Label CurrentGuess;
+        
+        /// <summary>
+        /// PlaceHolder3 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.PlaceHolder PlaceHolder3;
+        
+        /// <summary>
+        /// SubmitNewNumber control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button SubmitNewNumber;
     }
 }

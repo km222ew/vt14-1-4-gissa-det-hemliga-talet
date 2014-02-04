@@ -32,14 +32,25 @@
             <%-- Gissningar --%>
             <asp:PlaceHolder ID="PlaceHolder1" runat="server">
 
-                <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
+                <div>
+                    <asp:Label ID="PrevGuesses" runat="server" Text="sdsd" CssClass="info"></asp:Label>
+                </div>
 
             </asp:PlaceHolder>
 
             <%-- Resultat --%>
             <asp:PlaceHolder ID="PlaceHolder2" runat="server">
 
-                <asp:Label ID="Label2" runat="server" Text="Label"></asp:Label>
+                <div>
+                    <asp:Label ID="CurrentGuess" runat="server" Text="sdsd" CssClass="info"></asp:Label>
+                </div>
+
+            </asp:PlaceHolder>
+
+            <%-- Nytt nummer-knapp --%>
+            <asp:PlaceHolder ID="PlaceHolder3" runat="server">
+
+                <asp:Button ID="SubmitNewNumber" runat="server" Text="Slumpa nytt hemligt tal" CssClass="submit" />
 
             </asp:PlaceHolder>
 
