@@ -61,7 +61,7 @@ namespace GuessTheSecretNumber.Model
                 _previousGuesses.Add(guess);
                 Count = PreviousGuesses.Count;
 
-                if (guess == Number)
+                if (guess == _number)
                 {
                     CanMakeGuess = false;
                     return Outcome.Correct;
@@ -71,12 +71,12 @@ namespace GuessTheSecretNumber.Model
                     CanMakeGuess = false;
                     return Outcome.NoMoreGuesses;
                 }
-                else if (guess < Number)
+                else if (guess < _number)
                 {
                     CanMakeGuess = true;
                     return Outcome.Low;
                 }
-                else if (guess > Number)
+                else if (guess > _number)
                 {
                     CanMakeGuess = true;
                     return Outcome.High;

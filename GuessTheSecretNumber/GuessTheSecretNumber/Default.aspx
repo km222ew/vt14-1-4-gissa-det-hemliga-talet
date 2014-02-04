@@ -17,42 +17,46 @@
         <div>
 
             <div>
-                <asp:ValidationSummary ID="ValidationSummary" runat="server" CssClass="error" HeaderText="Ett fel inträffade. Korrigera felet och gör ett nytt försök." />
+                <asp:ValidationSummary ID="ValidationSummary" runat="server" CssClass="error" HeaderText="Ett fel inträffade. Korrigera felet och gör ett nytt försök." ValidationGroup="Stop" />
             </div>
 
             <%-- Input --%>
             <asp:Label ID="GuessInputLabel" runat="server" Text="Ange ett tal mellan 1 och 100: " CssClass="info"></asp:Label>
             <asp:TextBox ID="GuessInput" runat="server" autofocus="autofocus" CssClass="input"></asp:TextBox>
-            <asp:RequiredFieldValidator ID="GuessInputRequiredField" runat="server" ErrorMessage="Ett tal måste anges." ControlToValidate="GuessInput" Display="Dynamic" Text="*" CssClass="error"></asp:RequiredFieldValidator>
-            <asp:RangeValidator ID="GuessInputRange" runat="server" ErrorMessage="Ange ett tal mellan 1 och 100." ControlToValidate="GuessInput" Display="Dynamic" MaximumValue="100" MinimumValue="1" Text="*" Type="Integer" CssClass="error"></asp:RangeValidator>
+            <asp:RequiredFieldValidator ID="GuessInputRequiredField" runat="server" ErrorMessage="Ett tal måste anges." ControlToValidate="GuessInput" Display="Dynamic" Text="*" CssClass="error" ValidationGroup="Stop"></asp:RequiredFieldValidator>
+            <asp:RangeValidator ID="GuessInputRange" runat="server" ErrorMessage="Ange ett tal mellan 1 och 100." ControlToValidate="GuessInput" Display="Dynamic" MaximumValue="100" MinimumValue="1" Text="*" Type="Integer" CssClass="error" ValidationGroup="Stop"></asp:RangeValidator>
 
             <%-- Button --%>
-            <asp:Button ID="SubmitGuess" runat="server" Text="Skicka gissning" CssClass="submit" />
+            <asp:Button ID="SubmitGuess" runat="server" Text="Skicka gissning" CssClass="submit" OnClick="SubmitGuess_Click" ValidationGroup="Stop" />
     
             <%-- Gissningar --%>
-            <asp:PlaceHolder ID="PlaceHolder1" runat="server">
+            <asp:PlaceHolder ID="PrevGuessPlaceHolder" runat="server" Visible="False">
 
                 <div>
-                    <asp:Label ID="PrevGuesses" runat="server" Text="sdsd" CssClass="info"></asp:Label>
+                    <asp:Label ID="PrevGuesses" runat="server" Text="" CssClass="info"></asp:Label>
                 </div>
 
             </asp:PlaceHolder>
 
             <%-- Resultat --%>
-            <asp:PlaceHolder ID="PlaceHolder2" runat="server">
+            <asp:PlaceHolder ID="CurrGuessPlaceHolder" runat="server" Visible="False">
 
                 <div>
-                    <asp:Label ID="CurrentGuess" runat="server" Text="sdsd" CssClass="info"></asp:Label>
+                    <asp:Label ID="CurrentGuess" runat="server" Text="" CssClass="info"></asp:Label>
                 </div>
 
             </asp:PlaceHolder>
 
             <%-- Nytt nummer-knapp --%>
-            <asp:PlaceHolder ID="PlaceHolder3" runat="server">
+            
+            <asp:PlaceHolder ID="NewNmbrPlaceHolder" runat="server" Visible="False">
 
-                <asp:Button ID="SubmitNewNumber" runat="server" Text="Slumpa nytt hemligt tal" CssClass="submit" />
+                <asp:Button ID="SubmitNewNumber" runat="server" Text="Slumpa nytt hemligt tal" CssClass="submit" OnClick="SubmitNewNumber_Click" />
 
             </asp:PlaceHolder>
+                
+
+            
 
         </div>
         </form>
