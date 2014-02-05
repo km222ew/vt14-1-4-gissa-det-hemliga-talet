@@ -26,10 +26,10 @@
             <asp:RequiredFieldValidator ID="GuessInputRequiredField" runat="server" ErrorMessage="Ett tal måste anges." ControlToValidate="GuessInput" Display="Dynamic" Text="*" CssClass="error" ValidationGroup="Stop"></asp:RequiredFieldValidator>
             <asp:RangeValidator ID="GuessInputRange" runat="server" ErrorMessage="Ange ett tal mellan 1 och 100." ControlToValidate="GuessInput" Display="Dynamic" MaximumValue="100" MinimumValue="1" Text="*" Type="Integer" CssClass="error" ValidationGroup="Stop"></asp:RangeValidator>
 
-            <%-- Button --%>
+            <%-- Knapp för gissning --%>
             <asp:Button ID="SubmitGuess" runat="server" Text="Skicka gissning" CssClass="submit" OnClick="SubmitGuess_Click" ValidationGroup="Stop" />
     
-            <%-- Gissningar --%>
+            <%-- Presentation för föregående gissningar --%>
             <asp:PlaceHolder ID="PrevGuessPlaceHolder" runat="server" Visible="False">
 
                 <div>
@@ -38,7 +38,7 @@
 
             </asp:PlaceHolder>
 
-            <%-- Resultat --%>
+            <%-- Resultat av gissningen --%>
             <asp:PlaceHolder ID="CurrGuessPlaceHolder" runat="server" Visible="False">
 
                 <div>
@@ -47,11 +47,11 @@
 
             </asp:PlaceHolder>
 
-            <%-- Nytt nummer-knapp --%>
+            <%-- Knapp för att slumpa nytt nummer --%>
             
             <asp:PlaceHolder ID="NewNmbrPlaceHolder" runat="server" Visible="False">
 
-                <asp:Button ID="SubmitNewNumber" runat="server" Text="Slumpa nytt hemligt tal" CssClass="submit" OnClick="SubmitNewNumber_Click" />
+                <asp:Button ID="SubmitNewNumber" runat="server" Text="Slumpa nytt hemligt tal" CssClass="submit" OnClick="SubmitNewNumber_Click" autofocus="autofocus" />
 
             </asp:PlaceHolder>
                 
